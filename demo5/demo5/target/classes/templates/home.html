@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Home</title>
+    <style>
+        body {
+            background-color: #121212;
+            color: #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        .home-container {
+            background-color: #1e1e1e;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            width: 300px;
+            text-align: center;
+        }
+        .home-container h1 {
+            margin-bottom: 20px;
+        }
+        .home-container p {
+            margin-top: 20px;
+        }
+        .home-container a {
+            color: #1976d2;
+            text-decoration: none;
+        }
+        .home-container a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+<div class="home-container">
+    <h1>Добро пожаловать, <span th:text="${username}"></span>!</h1>
+    <p>Вы успешно авторизованы.</p>
+    <p><a href="/logout">Выйти</a></p>
+</div>
+</body>
+</html>
